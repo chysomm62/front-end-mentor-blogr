@@ -1,0 +1,217 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+/* a:not([class]) {
+  text-decoration-skip-ink: auto;
+} */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+label {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* make label elements block */
+label {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* variable */
+:root {
+  --verylight-red: hsl(13, 100%, 72%);
+  --light-red: hsl(353, 100%, 62%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* header */
+header {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--verylight-red),
+    var(--light-red)
+  );
+  padding: 4rem 2rem;
+  border-radius: 0 0 0 10rem;
+  min-height: 90vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .logo {
+  padding: 0.2rem 0;
+  max-width: 20%;
+}
+
+/* menu */
+.menu-wrap .menu {
+  position: fixed;
+  top: 7rem;
+  left: 2rem;
+  right: 2rem;
+  background-color: var(--white);
+  max-width: 100%;
+  min-height: 70vh;
+  z-index: 10;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 2rem;
+  height: 2.5rem;
+  padding: -0.2rem 0.2rem 0.2rem;
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hanburger line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* top and bottom lines */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -0.8rem;
+  width: 100%;
+  height: 1px;
+  background: inherit;
+}
+
+/* moves the bottom line down */
+.menu-wrap .hamburger > div:after {
+  top: 0.8rem;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* turn lines into x */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* drop-down */
+.dropdown button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.dropdown .drop-items {
+  display: none;
+}
