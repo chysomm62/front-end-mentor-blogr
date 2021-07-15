@@ -399,7 +399,7 @@ main h2 {
 .blue-sect {
   background-color: var(--dark-blue);
   color: var(--white);
-  min-height: 80vh;
+  /* min-height: 80vh; */
   border-radius: 0 5rem;
   margin-top: 50%;
   padding-bottom: 3rem;
