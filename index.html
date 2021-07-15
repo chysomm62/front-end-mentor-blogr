@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
   
   <title>Frontend Mentor | [Blogr]</title>
+  <script src="https://use.fontawesome.com/8e1f8243c9.js"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -31,11 +36,11 @@
             <div></div>
           </div>
 
-          <ul class="menu">
+          <ul class="hide-menu" id="menu">
             <li>
               <div class="dropdown">
                 <button class="drop-btn">Product
-                  <i class="fa fa-caret-down"></i>
+                  <i class="fas fa-angle-down click-btn"></i>
                 </button>
                 <ul class="drop-items">
                   <li> <a href="#">Overview</a></li>
@@ -50,7 +55,7 @@
             <li>
               <div class="dropdown">
                 <button class="drop-btn">Company
-                  <i class="fa fa-caret-down"></i>
+                  <i class="fas fa-angle-down click-btn"></i>
                 </button>
                 <ul class="drop-items">
                   <li> <a href="#">About</a></li>
@@ -64,7 +69,7 @@
             <li>
               <div class="dropdown">
                 <button class="drop-btn">Connect
-                  <i class="fa fa-caret-down"></i>
+                  <i class="fas fa-angle-down click-btn"></i>
                 </button>
                 <ul class="drop-items">
                   <li> <a href="#">Contact</a></li>
@@ -74,11 +79,13 @@
               </div>
             </li>
           
+            <li class="just-line"></li>
+
             <li>
               <a href="#">Login</a>
             </li>
           
-            <li>
+            <li class="signup">
               <a href="#">Sign Up</a>
             </li>
 
@@ -147,5 +154,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>

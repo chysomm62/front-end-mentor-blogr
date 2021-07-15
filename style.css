@@ -36,7 +36,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 18px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Overpass", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
 }
 
 /* A elements that don't have a class get default styles */
@@ -95,6 +96,7 @@ label {
   --verylight-red: hsl(13, 100%, 72%);
   --light-red: hsl(353, 100%, 62%);
   --white: hsl(0, 0%, 100%);
+  --white-snow: hsl(0, 4%, 90%);
 }
 
 /* header */
@@ -104,7 +106,7 @@ header {
     var(--verylight-red),
     var(--light-red)
   );
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   border-radius: 0 0 0 10rem;
   min-height: 90vh;
 }
@@ -122,9 +124,14 @@ header .logo {
 }
 
 /* menu */
-.menu-wrap .menu {
+
+.menu-wrap .hide-menu {
+  display: none;
+}
+
+.menu-wrap ul.menu {
   position: fixed;
-  top: 7rem;
+  top: 5rem;
   left: 2rem;
   right: 2rem;
   background-color: var(--white);
@@ -132,12 +139,13 @@ header .logo {
   min-height: 70vh;
   z-index: 10;
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  transition: all 0.4s ease;
 }
 
 .menu-wrap .toggler {
@@ -206,6 +214,17 @@ header .logo {
 }
 
 /* drop-down */
+.menu li {
+  min-width: 100%;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.dropdown {
+  min-width: 100%;
+}
+
 .dropdown button {
   background-color: transparent;
   border: none;
@@ -214,4 +233,67 @@ header .logo {
 
 .dropdown .drop-items {
   display: none;
+}
+
+.dropdown button:hover {
+  opacity: 0.7;
+}
+
+.dropdown .show-drop {
+  display: block;
+  background-color: var(--white-snow);
+  opacity: 0.8;
+  max-width: 100%;
+  margin: 1rem 0.1rem 0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.dropdown .show-drop li {
+  padding: 0.75rem;
+}
+
+.menu li.signup a {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--verylight-red),
+    var(--light-red)
+  );
+  color: var(--white);
+  max-width: max-content;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+}
+
+.menu li a:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--verylight-red),
+    var(--light-red)
+  );
+  color: var(--white);
+  max-width: max-content;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+}
+
+.just-line {
+  position: relative;
+  padding: 0.01rem;
+}
+.menu .just-line {
+  padding: 0;
+}
+
+.just-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  border-bottom: 2px solid var(--white-snow);
+}
+
+.fas {
+  color: var(--light-red);
 }
