@@ -113,8 +113,8 @@ header {
     var(--light-red)
   );
   padding: 3rem 2rem;
-  border-radius: 0 0 0 10rem;
-  min-height: 90vh;
+  border-radius: 0 0 0 5rem;
+  min-height: 100vh;
 }
 
 header nav {
@@ -126,7 +126,7 @@ header nav {
 
 header .logo {
   padding: 0.2rem 0;
-  max-width: 20%;
+  max-width: 25%;
 }
 
 /* menu */
