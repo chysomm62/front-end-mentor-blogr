@@ -96,6 +96,8 @@ label {
 :root {
   --verylight-red: hsl(13, 100%, 72%);
   --light-red: hsl(353, 100%, 62%);
+  --backlight-red: hsl(353, 100%, 62%);
+  --backVery-light-red: hsl(13, 100%, 72%);
   --white: hsl(0, 0%, 100%);
   --white-snow: hsl(0, 4%, 90%);
   --body-colo: hsl(207, 13%, 34%);
@@ -109,8 +111,8 @@ label {
 header {
   background-image: linear-gradient(
     to bottom right,
-    var(--verylight-red),
-    var(--light-red)
+    var(--backVery-light-red),
+    var(--backlight-red)
   );
   padding: 3rem 2rem;
   border-radius: 0 0 0 5rem;
@@ -235,6 +237,15 @@ header .logo {
   background-color: transparent;
   border: none;
   outline: none;
+}
+
+.click-btn {
+  display: inline;
+}
+
+.rotate-btn {
+  transition: all 0.5s ease;
+  transform: rotate(180deg);
 }
 
 .dropdown .drop-items {

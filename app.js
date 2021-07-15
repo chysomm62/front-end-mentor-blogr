@@ -21,6 +21,7 @@ const Btns = document.querySelectorAll(".click-btn");
 Btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const btnDiv = e.currentTarget.parentElement.parentElement;
+    btn.classList.toggle("rotate-btn");
 
     dropItems.forEach((item) => {
       if (item.parentElement == btnDiv) {
