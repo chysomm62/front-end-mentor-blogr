@@ -37,6 +37,7 @@ body {
   line-height: 1.5;
   font-size: 18px;
   font-family: "Overpass", sans-serif;
+  color: var(--body-colo);
   /* font-family: "Ubuntu", sans-serif; */
 }
 
@@ -97,6 +98,11 @@ label {
   --light-red: hsl(353, 100%, 62%);
   --white: hsl(0, 0%, 100%);
   --white-snow: hsl(0, 4%, 90%);
+  --body-colo: hsl(207, 13%, 34%);
+  --dark-blue: hsl(237, 23%, 32%);
+  --Very-dark-grayblue: hsl(237, 17%, 21%);
+  --footer-background: hsl(240, 10%, 16%);
+  --footer-text: hsl(240, 2%, 79%);
 }
 
 /* header */
@@ -177,7 +183,7 @@ header .logo {
 .menu-wrap .hamburger > div {
   position: relative;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: var(--white);
   display: flex;
   align-items: center;
@@ -193,7 +199,7 @@ header .logo {
   z-index: 1;
   top: -0.8rem;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: inherit;
 }
 
@@ -236,7 +242,7 @@ header .logo {
 }
 
 .dropdown button:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .dropdown .show-drop {
@@ -247,6 +253,7 @@ header .logo {
   margin: 1rem 0.1rem 0;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  transition: all 0.4s linear;
 }
 
 .dropdown .show-drop li {
@@ -296,4 +303,136 @@ header .logo {
 
 .fas {
   color: var(--light-red);
+}
+
+/* """"""""""""""""""""
+TEXTS IN HEADER
+""""""""""""""""""""" */
+.header-content {
+  color: var(--white);
+  min-height: 70vh;
+  padding: 2rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  padding-bottom: 3rem;
+  font-weight: 300;
+}
+
+.header-content .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content .buttons a {
+  border-radius: 3rem;
+  border: 1px solid var(--light-red);
+  background-color: var(--white);
+  color: var(--light-red);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header-content .buttons a.firsta:hover {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.header-content .buttons a.seconda {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.header-content .buttons a.seconda:hover {
+  border: 1px solid var(--light-red);
+  background-color: var(--white);
+  color: var(--light-red);
+}
+
+/* """"""""""""""""""""""""""
+MAIN SECTION
+""""""""""""""""""""""""""""" */
+
+main {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.back-circle {
+  padding: 2rem 0;
+}
+.back-circle .image {
+  min-width: 100%;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.text-section {
+  padding: 1rem 1.5rem;
+}
+
+.text-section p {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.blue-sect {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  min-height: 80vh;
+  border-radius: 0 5rem;
+  margin-top: 50%;
+  padding-bottom: 3rem;
+}
+.blue-sect div img {
+  margin-top: -50%;
+}
+
+/* """""""""""""""""""""""
+FOOTER
+"""""""""""""""""""""""""" */
+
+footer {
+  background-color: var(--footer-background);
+  padding: 3rem 0;
+  color: var(--white);
+  border-radius: 0 5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.logo {
+  align-content: center;
+  max-width: max-content;
+  align-self: center;
+}
+.logo img {
+  max-width: 100%;
+  align-self: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
 }
