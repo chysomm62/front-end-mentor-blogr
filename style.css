@@ -414,7 +414,7 @@ FOOTER
 
 footer {
   background-color: var(--footer-background);
-  padding: 3rem 0;
+  padding: 3rem 0 1rem;
   color: var(--white);
   border-radius: 0 5rem 0 0;
   display: flex;
@@ -426,6 +426,7 @@ footer {
   align-content: center;
   max-width: max-content;
   align-self: center;
+  padding: 1rem;
 }
 .logo img {
   max-width: 100%;
@@ -434,5 +435,15 @@ footer {
 
 footer ul {
   list-style-type: none;
-  padding-left: 0;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+footer > ul > li {
+  padding: 1rem 0;
+}
+
+footer ul li a {
+  color: var(--footer-text);
+  line-height: 2;
 }
