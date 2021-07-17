@@ -11,14 +11,7 @@
     rel="stylesheet">
   
   <title>Frontend Mentor | [Blogr]</title>
-  <script src="https://use.fontawesome.com/8e1f8243c9.js"></script>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
+  
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -78,17 +71,23 @@
                 </ul>
               </div>
             </li>
-            <div>
-              <li class="just-line"></li>
-
             <li>
-              <a href="#">Login</a>
+              <ul>
+                
+                  <li class="just-line"></li>
+                
+                  <li>
+                    <a href="#">Login</a>
+                  </li>
+                
+                  <li class="signup">
+                    <a href="#">Sign Up</a>
+                  </li>
+                
+              </ul>
+
             </li>
-          
-            <li class="signup">
-              <a href="#">Sign Up</a>
-            </li>
-            </div>
+            
           
             
 
@@ -112,35 +111,45 @@
     </header>
 
     <main>
-      <section>
+      <div>
         <h2>Designed for the future</h2>
-
-      <div class="back-circle">
-        <picture>
-          <source media="(min-width: 600px)" srcset="./images/illustration-editor-desktop.svg" class="image">
-          <img src="./images/illustration-editor-mobile.svg" alt="" class="image">
-        </picture>
       </div>
-      </section>
+        
 
-      <section class="text-section">
-        <h2>Introducing an extensible editor</h2>
-        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-        The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-        videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-        change the looks of a blog.</p>
-      </section>
-
-      <section class="text-section">
-        <h2>Robust content management</h2>
-        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
-        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
-      </section>
-
-      <section class="text-section blue-sect">
-        <div class="phones">
-          <img src="./images/illustration-phones.svg" alt="">
+      <div class="reversed before-footer">
+        <div class="back-circle">
+          <picture>
+            <source media="(min-width: 600px)" srcset="./images/illustration-editor-desktop.svg" class="image">
+            <img src="./images/illustration-editor-mobile.svg" alt="" class="image">
+          </picture>
         </div>
+
+        <div>
+          <section class="text-section">
+            <h2>Introducing an extensible editor</h2>
+            <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.</p>
+          </section>
+        
+          <section class="text-section">
+            <h2>Robust content management</h2>
+            <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+          </section>
+        </div>
+
+      </div>
+    
+
+      <section class="text-section blue-sect before-footer">
+        <div class="phone-back">
+          <div class="phones">
+            <img src="./images/illustration-phones.svg" alt="">
+          </div>
+        </div>
+        
         <div>
           <h2>State of the Art Infrastructure</h2>
           <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
@@ -149,25 +158,32 @@
         
       </section>
       
-      <div class="back-circle">
-        <picture>
-          <source media="(min-width: 600px)" srcset="./images/illustration-laptop-desktop.svg" class="image">
-          <img src="./images/illustration-laptop-mobile.svg" alt="" class="image">
-        </picture>
+      <div class="before-footer">
+        <div class="back-circle">
+          <picture>
+            <source media="(min-width: 600px)" srcset="./images/illustration-laptop-desktop.svg" class="image">
+            <img src="./images/illustration-laptop-desktop.svg" alt="" class="image">
+          </picture>
+        </div>
+        
+        <div>
+          <section class="text-section">
+            <h2>Free, open, simple</h2>
+            <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          </section>
+          
+          <section class="text-section">
+            <h2>Powerful tooling</h2>
+            <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+              breeze, but
+              capable of producing even the most complicated sites.</p>
+          </section>
+        </div>
+        
       </div>
-
-      <section class="text-section">
-        <h2>Free, open, simple</h2>
-        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
-        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-      </section>
-
-      <section class="text-section">
-        <h2>Powerful tooling</h2>
-        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-        capable of producing even the most complicated sites.</p>
-      </section>
+      
 
 
     </main>

@@ -15,22 +15,29 @@ toggler.addEventListener("click", () => {
 
 // dropdowns
 
+const dropDowns = document.querySelectorAll(".dropdowns");
 const dropItems = document.querySelectorAll(".drop-items");
 const Btns = document.querySelectorAll(".click-btn");
+console.log(dropDowns);
 
-Btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const btnDiv = e.currentTarget.parentElement.parentElement;
-    btn.classList.toggle("rotate-btn");
-
-    dropItems.forEach((item) => {
-      if (item.parentElement == btnDiv) {
-        item.classList.toggle("show-drop");
-      } else {
-        item.classList.remove("show-drop");
-      }
-    });
-  });
+dropDowns.forEach((dropdown) => {
+  const clickBtn = dropdown.querySelector(".drop-btn");
+  console.log(clickBtn);
 });
+
+// Btns.forEach((btn) => {
+//   btn.addEventListener("click", (e) => {
+//     const btnDiv = e.currentTarget.parentElement.parentElement;
+//     btn.classList.toggle("rotate-btn");
+
+//     dropItems.forEach((item) => {
+//       if (item.parentElement == btnDiv) {
+//         item.classList.toggle("show-drop");
+//       } else {
+//         item.classList.remove("show-drop");
+//       }
+//     });
+//   });
+// });
 
 // end of dropdowns

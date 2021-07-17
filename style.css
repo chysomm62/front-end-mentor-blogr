@@ -105,6 +105,7 @@ label {
   --Very-dark-grayblue: hsl(237, 17%, 21%);
   --footer-background: hsl(240, 10%, 16%);
   --footer-text: hsl(240, 2%, 79%);
+  --headers: hsl(208, 49%, 24%);
 }
 
 /* header */
@@ -245,7 +246,7 @@ header .logo {
 
 .click-btn {
   display: inline;
-  min-width: 1rem;
+  min-width: 1.5rem;
   padding: 0.25rem;
 }
 
@@ -303,10 +304,10 @@ header .logo {
 
 .just-line {
   position: relative;
-  padding: 0.01rem;
+  padding: 1rem;
 }
 .menu .just-line {
-  padding: 0;
+  padding: 1rem;
 }
 
 .just-line::after {
@@ -316,10 +317,6 @@ header .logo {
   left: 0;
   min-width: 100%;
   border-bottom: 2px solid var(--white-snow);
-}
-
-.fas {
-  color: var(--light-red);
 }
 
 /* """"""""""""""""""""
@@ -350,15 +347,16 @@ TEXTS IN HEADER
 
 .header-content .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .header-content .buttons a {
   border-radius: 3rem;
+  margin: 1rem;
   border: 1px solid var(--light-red);
   background-color: var(--white);
   color: var(--light-red);
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   font-size: 1rem;
   font-weight: 600;
   font-family: "Ubuntu", sans-serif;
@@ -401,6 +399,8 @@ main {
 main h2 {
   font-size: 1.8rem;
   line-height: 1.2;
+  font-weight: 800;
+  color: var(--headers);
 }
 
 .text-section {
@@ -421,8 +421,11 @@ main h2 {
   margin-top: 50%;
   padding-bottom: 3rem;
 }
+.blue-sect h2 {
+  color: var(--white);
+}
 .blue-sect .phones {
-  margin-top: -50%;
+  margin-top: -45%;
 }
 
 /* """""""""""""""""""""""
@@ -471,13 +474,80 @@ DESKTOP
 """""""""""""""""""""""""""""""""""""""""""""""""""""" */
 @media screen and (min-width: 600px) {
   header {
-    padding: 3rem;
+    padding: 6rem 8rem;
+  }
+
+  .header-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  main h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .blue-sect {
+    border-radius: 0 5rem;
+    padding-bottom: 3rem;
+    margin-top: 0;
+  }
+  .blue-sect h2 {
+    color: var(--white);
+  }
+  .blue-sect .phone-back {
+    position: relative;
+  }
+  .blue-sect .phones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .before-footer {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem;
+  }
+  .before-footer > div {
+    min-width: 45%;
+    text-align: left;
+  }
+  .before-footer.reversed {
+    flex-direction: row-reverse;
+  }
+  .before-footer .back-circle {
+    max-width: 50%;
+
+    position: relative;
+  }
+  .before-footer .back-circle .image {
+    min-width: 100%;
+  }
+  .before-footer > div:not(.back-circle) {
+    min-width: 50%;
+  }
+
+  .text-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 0.75rem 0;
+    text-align: left;
+  }
+  .text-section p {
+    padding: 0;
+    text-align: left;
+    font-size: 1.25rem;
   }
 
   footer {
     flex-direction: row;
-    padding: 4rem 8rem;
+    padding: 4rem;
     justify-content: space-evenly;
+    text-align: left;
   }
   footer .logo {
     align-self: flex-start;
