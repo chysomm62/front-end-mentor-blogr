@@ -438,12 +438,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  color: var(--footer-text);
 }
 .logo {
   align-content: center;
   max-width: max-content;
-  align-self: center;
   padding: 1rem;
+  align-self: center;
 }
 .logo img {
   max-width: 100%;
@@ -456,11 +457,29 @@ footer ul {
   font-size: 1rem;
 }
 
-footer > ul > li {
+footer h4 {
   padding: 1rem 0;
 }
 
 footer ul li a {
   color: var(--footer-text);
   line-height: 2;
+}
+
+/* """"""""""""""""""""""""""""""""""""""""""""""""""""
+DESKTOP
+"""""""""""""""""""""""""""""""""""""""""""""""""""""" */
+@media screen and (min-width: 600px) {
+  header {
+    padding: 3rem;
+  }
+
+  footer {
+    flex-direction: row;
+    padding: 4rem 8rem;
+    justify-content: space-evenly;
+  }
+  footer .logo {
+    align-self: flex-start;
+  }
 }
