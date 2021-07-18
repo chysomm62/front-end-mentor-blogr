@@ -424,7 +424,7 @@ main h2 {
 
 .blue-sect {
   background-image: url(./images/bg-pattern-circles.svg);
-  background-position: top center;
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: var(--dark-blue);
