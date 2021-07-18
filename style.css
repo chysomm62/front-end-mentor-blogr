@@ -611,6 +611,10 @@ DESKTOP
     font-weight: 800;
   }
 
+  main .main-h2 {
+    margin-bottom: -10rem;
+  }
+
   .blue-sect {
     border-radius: 0 5rem;
     padding-bottom: 3rem;
@@ -634,7 +638,7 @@ DESKTOP
     flex-basis: auto;
     align-items: center;
     justify-content: center;
-    padding: 7rem;
+    padding: 2rem 7rem;
   }
   .before-footer > div {
     min-width: 45%;
@@ -649,11 +653,11 @@ DESKTOP
     position: relative;
   }
   .before-footer .back-circle .image {
-    min-width: 200%;
-    margin-right: -100%;
+    min-width: 150%;
+    margin-right: -75%;
   }
   .before-footer .back-circle.to-left .image {
-    margin-left: -100%;
+    margin-left: -75%;
     position: relative;
   }
 
