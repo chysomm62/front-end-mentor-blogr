@@ -42,7 +42,9 @@ Btns.forEach((btn) => {
         if (btnSibling.classList.contains("show-drop")) {
           btn.classList.toggle("rotate-btn");
         } else {
-          btn.classList.remove("rotate-btn");
+          setTimeout(function () {
+            btn.classList.remove("rotate-btn");
+          }, 100);
         }
       } else {
         item.classList.remove("show-drop");

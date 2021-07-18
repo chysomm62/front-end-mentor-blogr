@@ -111,11 +111,14 @@ label {
 
 /* header */
 header {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--backVery-light-red),
-    var(--backlight-red)
-  );
+  background: url(./images/bg-pattern-intro.svg) center center no-repeat,
+    linear-gradient(
+      to bottom right,
+      var(--backVery-light-red),
+      var(--backlight-red)
+    );
+  background-color: var(--backlight-red);
+  background-size: 240%;
   padding: 3rem 2rem;
   border-radius: 0 0 0 5rem;
   min-height: 90vh;
@@ -551,7 +554,47 @@ DESKTOP
   header .logo {
     padding: 0.2rem 0;
     max-width: 25%;
-    align-self: flex-start;
+    align-self: center;
+  }
+
+  .dropdown .show-drop {
+    position: absolute;
+    display: block;
+    background-color: var(--backlight-red);
+    opacity: 0.8;
+    max-width: 100%;
+    margin: 1rem 0.1rem 0;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s linear;
+  }
+
+  .hide-menu ul li {
+    font-size: 1rem;
+  }
+
+  .hide-menu ul li.signup a {
+    border-radius: 3rem;
+    margin: 1rem;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--light-red);
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .hide-menu li a:hover {
+    border-radius: 3rem;
+    margin: 1rem;
+    border: 1px solid var(--light-red);
+    background-color: var(--white);
+    color: var(--light-red);
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Ubuntu", sans-serif;
   }
 
   .header-content h1 {
@@ -602,8 +645,14 @@ DESKTOP
     position: relative;
   }
   .before-footer .back-circle .image {
-    min-width: 100%;
+    min-width: 200%;
+    margin-right: -100%;
   }
+  .before-footer .back-circle.to-left .image {
+    margin-left: -100%;
+    position: relative;
+  }
+
   .before-footer > div:not(.back-circle) {
     min-width: 50%;
   }
