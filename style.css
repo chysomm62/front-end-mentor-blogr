@@ -52,6 +52,7 @@ a {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 /* Make images easier to work with */
@@ -138,11 +139,11 @@ header .logo {
   display: none;
 }
 
-.menu-wrap ul.menu {
-  position: fixed;
-  top: 5rem;
-  left: 2rem;
-  right: 2rem;
+.menu-wrap div.menu {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
   background-color: var(--white);
   max-width: 100%;
   min-height: 70vh;
@@ -155,6 +156,10 @@ header .logo {
   justify-content: space-between;
   text-align: center;
   transition: all 0.4s ease;
+}
+
+.drop-btn .click-btn.click-light {
+  display: none;
 }
 
 .menu-wrap .toggler {
@@ -223,7 +228,7 @@ header .logo {
 }
 
 /* drop-down */
-.menu li {
+.menu ul li {
   min-width: 100%;
   padding: 1rem 0;
   font-size: 1.2rem;
@@ -304,9 +309,6 @@ header .logo {
 
 .just-line {
   position: relative;
-  padding: 1rem;
-}
-.menu .just-line {
   padding: 1rem;
 }
 
@@ -474,7 +476,82 @@ DESKTOP
 """""""""""""""""""""""""""""""""""""""""""""""""""""" */
 @media screen and (min-width: 600px) {
   header {
-    padding: 6rem 8rem;
+    padding: 4rem;
+    max-width: 100%;
+  }
+
+  /* """""""""""MENU""""""""""""""""""" */
+  .menu-wrap .toggler,
+  .menu-wrap .hamburger,
+  .menu-wrap .hamburger div {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: content;
+    align-items: flex-start;
+  }
+
+  header nav .menu-wrap {
+    min-width: 75%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-wrap .hide-menu {
+    position: relative;
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: all 0.4s ease;
+    min-width: 100%;
+  }
+
+  .menu li {
+    min-width: min-content;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .dropdown {
+    min-width: 100%;
+  }
+
+  .dropdown .drop-btn {
+    color: var(--white);
+  }
+
+  .drop-btn .click-btn.click-dark {
+    display: none;
+  }
+
+  .drop-btn .click-btn.click-light {
+    display: block;
+  }
+
+  ul .just-line {
+    display: none;
+  }
+
+  .hide-menu ul {
+    display: flex;
+  }
+  .hide-menu ul li {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  header .logo {
+    padding: 0.2rem 0;
+    max-width: 25%;
+    align-self: flex-start;
   }
 
   .header-content h1 {

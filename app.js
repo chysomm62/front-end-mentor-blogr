@@ -15,29 +15,40 @@ toggler.addEventListener("click", () => {
 
 // dropdowns
 
-const dropDowns = document.querySelectorAll(".dropdowns");
+const dropDowns = document.querySelectorAll(".dropdown");
 const dropItems = document.querySelectorAll(".drop-items");
 const Btns = document.querySelectorAll(".click-btn");
-console.log(dropDowns);
 
-dropDowns.forEach((dropdown) => {
-  const clickBtn = dropdown.querySelector(".drop-btn");
-  console.log(clickBtn);
-});
+// dropDowns.forEach((element) => {
+//   const drop = element.querySelector(".drop-items");
+//   const clickBtn = element.querySelector(".click-btn");
+//   console.log(clickBtn);
 
-// Btns.forEach((btn) => {
-//   btn.addEventListener("click", (e) => {
-//     const btnDiv = e.currentTarget.parentElement.parentElement;
-//     btn.classList.toggle("rotate-btn");
-
-//     dropItems.forEach((item) => {
-//       if (item.parentElement == btnDiv) {
-//         item.classList.toggle("show-drop");
-//       } else {
-//         item.classList.remove("show-drop");
-//       }
-//     });
+//   clickBtn.addEventListener("click", () => {
+//     clickBtn.classList.toggle("rotate-btn");
+//     drop.classList.toggle("show-drop");
 //   });
 // });
+
+Btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const btnDiv = e.currentTarget.parentElement.parentElement;
+    const currentBtn = e.currentTarget.parentElement;
+    const btnSibling = currentBtn.nextElementSibling;
+
+    dropItems.forEach((item) => {
+      if (item.parentElement == btnDiv) {
+        item.classList.toggle("show-drop");
+        if (btnSibling.classList.contains("show-drop")) {
+          btn.classList.toggle("rotate-btn");
+        } else {
+          btn.classList.remove("rotate-btn");
+        }
+      } else {
+        item.classList.remove("show-drop");
+      }
+    });
+  });
+});
 
 // end of dropdowns
