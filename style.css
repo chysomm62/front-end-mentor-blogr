@@ -286,6 +286,10 @@ header .logo {
   padding: 0.75rem;
 }
 
+.menu ul li {
+  font-size: 0.75rem;
+}
+
 .menu li.signup a {
   background-image: linear-gradient(
     to bottom right,
@@ -361,8 +365,8 @@ TEXTS IN HEADER
   border: 1px solid var(--light-red);
   background-color: var(--white);
   color: var(--light-red);
-  padding: 0.75rem 1.25rem;
-  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
   font-weight: 600;
   font-family: "Ubuntu", sans-serif;
 }
