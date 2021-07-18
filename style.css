@@ -423,9 +423,12 @@ main h2 {
 }
 
 .blue-sect {
+  background-image: url(./images/bg-pattern-circles.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: var(--dark-blue);
   color: var(--white);
-  /* min-height: 80vh; */
   border-radius: 0 5rem;
   margin-top: 50%;
   padding-bottom: 3rem;
@@ -435,6 +438,7 @@ main h2 {
 }
 .blue-sect .phones {
   margin-top: -45%;
+  justify-self: center;
 }
 
 /* """""""""""""""""""""""
@@ -619,9 +623,9 @@ DESKTOP
     margin-bottom: -10rem;
   }
 
-  .blue-sect {
+  main .blue-sect {
     border-radius: 0 5rem;
-    padding-bottom: 3rem;
+    padding: 7rem;
     margin-top: 0;
   }
   .blue-sect h2 {
