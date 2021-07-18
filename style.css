@@ -361,7 +361,7 @@ TEXTS IN HEADER
 
 .header-content .buttons a {
   border-radius: 3rem;
-  margin: 1rem;
+  margin: 0.75rem;
   border: 1px solid var(--light-red);
   background-color: var(--white);
   color: var(--light-red);
