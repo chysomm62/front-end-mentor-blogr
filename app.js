@@ -1,56 +1,60 @@
-// menu toggle
-const menu = document.getElementById("menu");
-const toggler = document.querySelector(".toggler");
+window.addEventListener("load", () => {
+  document.getElementById("load-text").style.display = "none";
 
-toggler.addEventListener("click", () => {
-  if (toggler.checked) {
-    menu.classList.toggle("menu");
-    console.log(true);
-  } else {
-    console.log(false);
-    menu.classList.remove("menu");
-  }
-});
-// end of menu toggle
+  // menu toggle
+  const menu = document.getElementById("menu");
+  const toggler = document.querySelector(".toggler");
 
-// dropdowns
+  toggler.addEventListener("click", () => {
+    if (toggler.checked) {
+      menu.classList.toggle("menu");
+      console.log(true);
+    } else {
+      console.log(false);
+      menu.classList.remove("menu");
+    }
+  });
+  // end of menu toggle
 
-const dropDowns = document.querySelectorAll(".dropdown");
-const dropItems = document.querySelectorAll(".drop-items");
-const Btns = document.querySelectorAll(".click-btn");
+  // dropdowns
 
-// dropDowns.forEach((element) => {
-//   const drop = element.querySelector(".drop-items");
-//   const clickBtn = element.querySelector(".click-btn");
-//   console.log(clickBtn);
+  const dropDowns = document.querySelectorAll(".dropdown");
+  const dropItems = document.querySelectorAll(".drop-items");
+  const Btns = document.querySelectorAll(".click-btn");
 
-//   clickBtn.addEventListener("click", () => {
-//     clickBtn.classList.toggle("rotate-btn");
-//     drop.classList.toggle("show-drop");
-//   });
-// });
+  // dropDowns.forEach((element) => {
+  //   const drop = element.querySelector(".drop-items");
+  //   const clickBtn = element.querySelector(".click-btn");
+  //   console.log(clickBtn);
 
-Btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const btnDiv = e.currentTarget.parentElement.parentElement;
-    const currentBtn = e.currentTarget.parentElement;
-    const btnSibling = currentBtn.nextElementSibling;
+  //   clickBtn.addEventListener("click", () => {
+  //     clickBtn.classList.toggle("rotate-btn");
+  //     drop.classList.toggle("show-drop");
+  //   });
+  // });
 
-    dropItems.forEach((item) => {
-      if (item.parentElement == btnDiv) {
-        item.classList.toggle("show-drop");
-        if (btnSibling.classList.contains("show-drop")) {
-          btn.classList.toggle("rotate-btn");
+  Btns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const btnDiv = e.currentTarget.parentElement.parentElement;
+      const currentBtn = e.currentTarget.parentElement;
+      const btnSibling = currentBtn.nextElementSibling;
+
+      dropItems.forEach((item) => {
+        if (item.parentElement == btnDiv) {
+          item.classList.toggle("show-drop");
+          if (btnSibling.classList.contains("show-drop")) {
+            btn.classList.toggle("rotate-btn");
+          } else {
+            setTimeout(function () {
+              btn.classList.remove("rotate-btn");
+            }, 100);
+          }
         } else {
-          setTimeout(function () {
-            btn.classList.remove("rotate-btn");
-          }, 100);
+          item.classList.remove("show-drop");
         }
-      } else {
-        item.classList.remove("show-drop");
-      }
+      });
     });
   });
-});
 
-// end of dropdowns
+  // end of dropdowns
+});
